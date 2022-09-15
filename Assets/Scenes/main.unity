@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -481,17 +481,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212645884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1903363528}
-  m_Father: {fileID: 1774841179}
-  m_RootOrder: 2
+  m_Father: {fileID: 2137539498}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: -50}
+  m_AnchoredPosition: {x: -1, y: -50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &212645886
@@ -1499,7 +1499,7 @@ GameObject:
   - component: {fileID: 1747200689}
   m_Layer: 5
   m_Name: PlayerName
-  m_TagString: Untagged
+  m_TagString: PlayerN
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1577,8 +1577,9 @@ GameObject:
   - component: {fileID: 1774841182}
   - component: {fileID: 1774841181}
   - component: {fileID: 1774841180}
+  - component: {fileID: 1774841183}
   m_Layer: 5
-  m_Name: InputPlayerN
+  m_Name: InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1597,9 +1598,8 @@ RectTransform:
   m_Children:
   - {fileID: 1280273286}
   - {fileID: 1921060454}
-  - {fileID: 212645885}
   m_Father: {fileID: 2137539498}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1709,6 +1709,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774841178}
   m_CullTransparentMesh: 1
+--- !u!114 &1774841183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774841178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42eb9c91934853d4b88447109d11e9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1797008437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,7 +1888,7 @@ GameObject:
   - component: {fileID: 1921060455}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: PlayerN
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2117,6 +2129,7 @@ RectTransform:
   - {fileID: 474497239}
   - {fileID: 2078529055}
   - {fileID: 1747200688}
+  - {fileID: 212645885}
   - {fileID: 1774841179}
   m_Father: {fileID: 0}
   m_RootOrder: 6
