@@ -8,6 +8,7 @@ TagManager:
   - PlayBtn
   - Canvas
   - StartScreen
+  - MaxScoreText
   layers:
   - Default
   - TransparentFX

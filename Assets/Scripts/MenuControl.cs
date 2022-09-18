@@ -19,5 +19,6 @@ public class MenuControl : MonoBehaviour
     {
         username = arg0;
         Debug.Log("Nombre del jugador: " + username);
+        PlayerPrefs.SetString("PName", username);
     }
 }
