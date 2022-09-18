@@ -9,19 +9,26 @@ public class MainManager : MonoBehaviour
     public Brick BrickPrefab;
     public int LineCount = 6;
     public Rigidbody Ball;
+    public GameObject playBtn;
+    public GameObject startScreen;
 
     public Text ScoreText;
     public GameObject GameOverText;
     
     private bool m_Started = false;
     private int m_Points;
+    private static int maxScore = 0;
     
     private bool m_GameOver = false;
 
     
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        Time.timeScale = 0;
+        playBtn = GameObject.FindGameObjectWithTag("PlayBtn");
+        startScreen = GameObject.FindGameObjectWithTag("StartScreen");
+
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
         
@@ -36,6 +43,12 @@ public class MainManager : MonoBehaviour
                 brick.onDestroyed.AddListener(AddPoint);
             }
         }
+    }
+
+    public void StartGame()
+    {
+        Time.timeScale = 1;
+        startScreen.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -72,5 +85,9 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverText.SetActive(true);
+        if (m_Points > maxScore) {
+            maxScore = m_Points;
+        }
+        Debug.Log("Max score: " + maxScore);
     }
 }

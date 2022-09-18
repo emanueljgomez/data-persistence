@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerN
+  - PlayBtn
+  - Canvas
+  - StartScreen
   layers:
   - Default
   - TransparentFX
