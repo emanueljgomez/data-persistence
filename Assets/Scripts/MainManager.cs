@@ -28,6 +28,8 @@ public class MainManager : MonoBehaviour
         Time.timeScale = 0;
         playBtn = GameObject.FindGameObjectWithTag("PlayBtn");
         startScreen = GameObject.FindGameObjectWithTag("StartScreen");
+        maxScore = PlayerPrefs.GetInt("MaxScore");
+        PlayerPrefs.SetInt("MaxScore", maxScore);
 
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
@@ -87,6 +89,7 @@ public class MainManager : MonoBehaviour
         GameOverText.SetActive(true);
         if (m_Points > maxScore) {
             maxScore = m_Points;
+            PlayerPrefs.SetInt("MaxScore", maxScore);
         }
         Debug.Log("Max score: " + maxScore);
     }
