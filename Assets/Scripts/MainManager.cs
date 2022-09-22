@@ -33,7 +33,6 @@ public class MainManager : MonoBehaviour
         playBtn = GameObject.FindGameObjectWithTag("PlayBtn");
         startScreen = GameObject.FindGameObjectWithTag("StartScreen");
         maxScore = PlayerPrefs.GetInt("MaxScore");
-        username = PlayerPrefs.GetString("PName");
         champion = PlayerPrefs.GetString("Champion");
         Debug.Log("Current Max score: " + maxScore);
         Debug.Log("Current Player: " + username);
@@ -105,11 +104,13 @@ public class MainManager : MonoBehaviour
         GameOverText.SetActive(true);
         if (m_Points > maxScore) {
             maxScore = m_Points;
+            username = PlayerPrefs.GetString("PName");
             PlayerPrefs.SetInt("MaxScore", maxScore);
             PlayerPrefs.SetString("Champion", username);
             champion = PlayerPrefs.GetString("Champion");
             maxScoreText.text = $"[ Highest Score ]\n{champion} - {maxScore}";
         }
         Debug.Log("Max score: " + maxScore);
+        Debug.Log("Nombre del jugador: " + username); 
     }
 }

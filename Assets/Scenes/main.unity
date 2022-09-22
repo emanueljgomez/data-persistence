@@ -474,7 +474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &188490586
 RectTransform:
   m_ObjectHideFlags: 0
@@ -507,7 +507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1c40937a5e12a4b85939dc0c4466c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toZero: 0
 --- !u!114 &188490588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,6 +851,7 @@ MonoBehaviour:
   startScreen: {fileID: 0}
   username: 
   champion: 
+  toZero: 0
   ScoreText: {fileID: 188020406}
   maxScoreText: {fileID: 532490794}
   GameOverText: {fileID: 474497238}
